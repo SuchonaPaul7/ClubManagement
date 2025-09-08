@@ -1,19 +1,21 @@
+package entity;
+
 import java.util.Scanner;
 
 public class Member {
-    private String name;
-    private int studentId;
-    private String department;
+    public String name;
+    public int studentId;
+    public String department;
     private String email;
     private String mobileNumber;
     private int semester;
-    private int clubId;
+    public int clubId;
 
-    public Member(String input_name, int input_studentid, String input_department, String input_email){
+    public Member(String input_name, int input_studentid, String input_department, int input_clubid){
         name = input_name;
         studentId = input_studentid;
         department = input_department;
-        email = input_email;
+        clubId = input_clubid;
     }
 
     public static void print(Member member){
@@ -23,15 +25,15 @@ public class Member {
                 + "Email: " + member.email + "\n"
                 + "Mobile Number: " + member.mobileNumber + "\n"
                 + "Semester: " + member.semester + "\n"
-                + "Club ID: " + member.clubId);
+                + "entity.Club ID: " + member.clubId);
     }
 
-    public static Member createFromConsole(){
+    public static Member createFromConsole(int clubID){
         //creating an input scanner object
         Scanner sc = new Scanner(System.in);
 
         //take input from terminal
-        System.out.print("Enter Member Name: ");
+        System.out.print("Enter entity.Member Name: ");
         String input_name = sc.nextLine();   //read full line including space
 
         System.out.print("Enter Student ID: ");
@@ -41,12 +43,9 @@ public class Member {
         System.out.print("Enter Department: ");
         String input_department = sc.nextLine();
 
-        System.out.print("Enter Email: ");
-        String input_email = sc.nextLine();
 
-        sc.close();
         //creating a test member from console input
-         return new Member(input_name, input_studentid, input_department, input_email);
+         return new Member(input_name, input_studentid, input_department, clubID);
 
 
     }

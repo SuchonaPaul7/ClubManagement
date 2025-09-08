@@ -1,9 +1,11 @@
+package entity;
+
 import java.util.Scanner;
 
 
 public class Sponsor {
-    String organization;
-    String email;
+    public String organization;
+    public String email;
     String mobileNumber;
     private String address;
 
@@ -29,7 +31,7 @@ public class Sponsor {
         System.out.print("Enter Mobile Number: ");
         String input_number = sc.nextLine();
 
-        sc.close();
+
         //creating a test sponsor from console input
          return new Sponsor(input_name, input_email, input_number);
 
