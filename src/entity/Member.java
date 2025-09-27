@@ -33,7 +33,7 @@ public class Member {
         Scanner sc = new Scanner(System.in);
 
         //take input from terminal
-        System.out.print("Enter entity.Member Name: ");
+        System.out.print("Enter Member Name: ");
         String input_name = sc.nextLine();   //read full line including space
 
         System.out.print("Enter Student ID: ");

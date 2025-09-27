@@ -213,7 +213,7 @@ public class Main {
                 // Table Header
                 System.out.println("+------------+----------------------+");
                 System.out.printf("| %-10s | %-20s |\n", "Advisor ID", "Advisor Name");
-                System.out.println("+---------------+------------------+\n");
+                System.out.println("+------------+----------------------+");
 
 
                 AdvisorDAO adao = new AdvisorDAO();
@@ -227,34 +227,34 @@ public class Main {
 
             case "Sponsor":
                 // Table Header
-                System.out.println("+---------------+------------------+");
-                System.out.printf("| %-13s | %-17s |\n", "Organization", "Email");
-                System.out.println("+---------------+------------------+\n");
+                System.out.println("+----------------------+---------------------------+");
+                System.out.printf("| %-20s | %-25s |\n", "Organization", "Email");
+                System.out.println("+----------------------+---------------------------+");
 
 
                 SponsorDAO sdao = new SponsorDAO();
 
                 for (var sponsor : sdao.getAll()) {
-                    System.out.printf("| %-13s | %-17s |\n", sponsor.organization, sponsor.email); // class attrs names
+                    System.out.printf("|%-21s | %-25s |\n", sponsor.organization, sponsor.email); // class attrs names
                 }
 
-                System.out.println("+---------------+------------------+\n");
+                System.out.println("+----------------------+---------------------------+\n");
                 break;
 
             case "Committee":
                 // Table Header
-                System.out.println("+------------+----------------------+");
-                System.out.printf("| %-10s | %-20s |\n", "Start Year", "End Year");
-                System.out.println("+------------+----------------------+");
+                System.out.println("+------------+------------+");
+                System.out.printf("| %-10s | %-10s |\n", "Start Year", "End Year");
+                System.out.println("+------------+------------+");
 
 
                 CommitteeDAO cdao = new CommitteeDAO();
 
                 for (var committee : cdao.getAll()) {
-                    System.out.printf("| %-10s | %-20s |\n", committee.startYear, committee.endYear); // class attrs names
+                    System.out.printf("| %-10s | %-10s |\n",committee.startYear, committee.endYear); // class attrs names
                 }
 
-                System.out.println("+------------+----------------------+\n");
+                System.out.println("+------------+------------+\n");
                 break;
 
         }
